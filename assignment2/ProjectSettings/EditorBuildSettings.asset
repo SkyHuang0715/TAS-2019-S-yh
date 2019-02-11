@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    guid: 8aba0a05560a39f46a91e06db7d14a05
+  - enabled: 1
+    path: "Assets/PolygonNaturePack-\u4F4E\u9762\u6570\u7684\u81EA\u7136\u666F\u89C2\u6A21\u578B/PolygonNature-\u4F4E\u9762\u6570\u7684\u81EA\u7136\u666F\u89C2\u6A21\u578B/Scenes/DemoScene_Classic_Trees.unity"
+    guid: 8866da7caad60954a93a5a2f437a384b
   m_configObjects: {}

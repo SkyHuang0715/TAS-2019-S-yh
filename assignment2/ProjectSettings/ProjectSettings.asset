@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: c9103de1556dc0a42b1b2924756e28da
+  productGUID: 9e0db7720ddb4fb4ca7bd0354f3a7367
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: assignment2
+  productName: curve1
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -611,9 +611,9 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: fce8a747-051a-42a0-af79-2c4a038379cd
+  cloudProjectId: 0586fa92-8d83-4834-b27d-dd262a6dfff8
   framebufferDepthMemorylessMode: 0
-  projectName: assignment2
+  projectName: curve1
   organizationId: yh2934
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

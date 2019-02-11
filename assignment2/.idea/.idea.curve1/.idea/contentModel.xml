@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\she51\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\she51\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_curve1.-517030091.00" t="ExcludeRecursive" />
+    <e p="F:\Tech Art\curve1" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Bezier.cs" t="Include" />
+        <e p="BezierControlPointMode.cs" t="Include" />
+        <e p="BezierSpline.cs" t="Include" />
+        <e p="Editor" t="Include">
+          <e p="BezierSplineInspector.cs" t="Include" />
+        </e>
+        <e p="PolygonNaturePack-低面数的自然景观模型" t="Include">
+          <e p="PolygonNature-低面数的自然景观模型" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="SkyGradient.shader" t="Include" />
+              <e p="StandardMike.shader" t="Include" />
+              <e p="SyntyStudios_LOD.shader" t="Include" />
+              <e p="SyntyStudios_Moss.shader" t="Include" />
+              <e p="SyntyStudios_Trees.shader" t="Include" />
+              <e p="SyntyStudios_Vines.shader" t="Include" />
+              <e p="SyntyStudios_Water.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="BezierExample.cs" t="Include" />
+          <e p="ButtonForLAUB.cs" t="Include" />
+          <e p="DrawBezierExample.cs" t="Include" />
+          <e p="LookAtUnityBezier.cs" t="Include" />
+        </e>
+        <e p="SplineWalker.cs" t="Include" />
+      </e>
+      <e p="curve1.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

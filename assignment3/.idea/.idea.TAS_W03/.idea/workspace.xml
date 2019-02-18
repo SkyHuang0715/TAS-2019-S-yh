@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="59d5ee4e-d629-4fe2-9f76-96984d719e98" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ThirdPersonCameraController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="325" lean-forward="true" selection-start-line="325" selection-end-line="325" />
+              <folding>
+                <marker date="1550477715093" expanded="false" signature="6:186" ph="..." />
+                <marker date="1550477715093" expanded="true" signature="245:17553" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="252:599" ph="Internal References" />
+                <marker date="1550477715093" expanded="true" signature="605:953" ph="Public Tuning Variables" />
+                <marker date="1550477715093" expanded="false" signature="964:1325" ph="Persistent Outputs" />
+                <marker date="1550477715093" expanded="true" signature="1351:1584" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="1619:2289" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="2140:2222" ph="/* camera collision ... */" />
+                <marker date="1550477715093" expanded="true" signature="2352:4118" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="2487:2556" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="2617:2684" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="2697:2747" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="2854:2971" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="3026:3075" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="3075:3104" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="3520:3898" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="3666:3856" ph="/* if (distance &gt; 2) ... */" />
+                <marker date="1550477715093" expanded="true" signature="3911:3967" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="3975:4112" ph="/* _Raycast(); ... */" />
+                <marker date="1550477715093" expanded="false" signature="4124:7596" ph="States" />
+                <marker date="1550477715093" expanded="true" signature="4295:5840" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="4360:4414" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="4447:4522" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="4535:5302" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="4558:4605" ph="/* if(Input.GetKeyDown(&quot;space&quot;)) ... */" />
+                <marker date="1550477715093" expanded="true" signature="4945:5101" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="5151:5232" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="5324:5834" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="5458:5577" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="5675:5769" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="5974:7084" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="5989:6123" ph="/* Ray ray = new Ray(_avatarTransform.position ,_avatarLookForward); ... */" />
+                <marker date="1550477715093" expanded="true" signature="6134:6203" ph="/* RaycastHit hit; ... */" />
+                <marker date="1550477715093" expanded="true" signature="6921:7016" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="7151:7428" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="7313:7422" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="7466:7529" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="7560:7581" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="7602:16467" ph="Internal Logic" />
+                <marker date="1550477715093" expanded="true" signature="7896:11329" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="8052:8520" ph="/* if (_Helper_IsThereOOI()) ... */" />
+                <marker date="1550477715093" expanded="true" signature="8558:10370" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="8588:9103" ph="/* Collider[] objs; ... */" />
+                <marker date="1550477715093" expanded="true" signature="9768:10002" ph="/* Quaternion movecam = Quaternion.Euler(pitch, yaw, 0); ... */" />
+                <marker date="1550477715093" expanded="true" signature="10127:10320" ph="/* _cameraTransform.Rotate(Vector3.right *pitch * Time.deltaTime, Space.Self); ... */" />
+                <marker date="1550477715093" expanded="true" signature="10387:10666" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="11363:11882" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="11916:11991" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="12038:13148" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="13672:16217" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="13803:14291" ph="/* if (Input.GetAxis(&quot;Mouse X&quot;) != 0) ... */" />
+                <marker date="1550477715093" expanded="true" signature="14324:16210" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="15449:15875" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="15611:15829" ph="/* if (distance &gt; 2) ... */" />
+                <marker date="1550477715093" expanded="true" signature="15892:15960" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="15973:16200" ph="/* lerp for smooth the fade in ... */" />
+                <marker date="1550477715093" expanded="true" signature="16287:16451" ph="{...}" />
+                <marker date="1550477715093" expanded="false" signature="16473:17529" ph="Helper Functions" />
+                <marker date="1550477715093" expanded="true" signature="16598:16854" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="16892:17338" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="17154:17303" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="17229:17293" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="17388:17509" ph="{...}" />
+                <marker date="1550477715093" expanded="true" signature="17403:17477" ph="/* Sphere Overlap ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>forward</find>
+      <find>idle</find>
+      <find>verticalOffset</find>
+      <find>avatarOb</find>
+      <find>cameral</find>
+      <find>TargetofLAO</find>
+      <find>lookat</find>
+      <find>center</find>
+      <find>cameraloo</find>
+      <find>avatarObservationOffset</find>
+      <find>target</find>
+      <find>observation</find>
+      <find>cameralook</find>
+      <find>camEulerHold</find>
+      <find>distance</find>
+      <find>raycast</find>
+      <find>_cameraTran</find>
+      <find>lerp</find>
+      <find>manual</find>
+      <find>_camEulerHold</find>
+      <find>iswalking</find>
+      <find>overlap</find>
+      <find>_fieldOfView_Applied</find>
+      <find>OverlapSphere</find>
+      <find>_oOIPresent</find>
+      <find>_cameraTransform</find>
+      <find>_avatarTransform</find>
+      <find>ooi</find>
+      <find>cameraro</find>
+      <find>avatar</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ThirdPersonCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonCameraController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="307" />
+    <option name="y" value="159" />
+    <option name="width" value="1519" />
+    <option name="height" value="850" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="H:/Unity files/aqura" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59d5ee4e-d629-4fe2-9f76-96984d719e98" name="Default Changelist" comment="" />
+      <created>1550108518534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550108518534</updated>
+      <workItem from="1550108526114" duration="1322000" />
+      <workItem from="1550269397329" duration="28386000" />
+      <workItem from="1550372320069" duration="9645000" />
+      <workItem from="1550385108150" duration="13430000" />
+      <workItem from="1550432062082" duration="29849000" />
+      <workItem from="1550465830760" duration="11519000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="94151000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="307" y="159" width="1519" height="850" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17820425" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unity" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="6" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraCollision.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="44" />
+          <folding>
+            <marker date="1550448080001" expanded="false" signature="6:32" ph="..." />
+            <marker date="1550448080001" expanded="true" signature="75:821" ph="{...}" />
+            <marker date="1550448080001" expanded="true" signature="131:819" ph="{...}" />
+            <marker date="1550448080001" expanded="true" signature="293:813" ph="{...}" />
+            <marker date="1550448080001" expanded="true" signature="349:401" ph="{...}" />
+            <marker date="1550448080001" expanded="true" signature="550:602" ph="{...}" />
+            <marker date="1550448080001" expanded="true" signature="710:803" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ThirdPersonCameraController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="325" lean-forward="true" selection-start-line="325" selection-end-line="325" />
+          <folding>
+            <marker date="1550477715093" expanded="false" signature="6:186" ph="..." />
+            <marker date="1550477715093" expanded="true" signature="245:17553" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="252:599" ph="Internal References" />
+            <marker date="1550477715093" expanded="true" signature="605:953" ph="Public Tuning Variables" />
+            <marker date="1550477715093" expanded="false" signature="964:1325" ph="Persistent Outputs" />
+            <marker date="1550477715093" expanded="true" signature="1351:1584" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="1619:2289" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="2140:2222" ph="/* camera collision ... */" />
+            <marker date="1550477715093" expanded="true" signature="2352:4118" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="2487:2556" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="2617:2684" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="2697:2747" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="2854:2971" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="3026:3075" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="3075:3104" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="3520:3898" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="3666:3856" ph="/* if (distance &gt; 2) ... */" />
+            <marker date="1550477715093" expanded="true" signature="3911:3967" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="3975:4112" ph="/* _Raycast(); ... */" />
+            <marker date="1550477715093" expanded="false" signature="4124:7596" ph="States" />
+            <marker date="1550477715093" expanded="true" signature="4295:5840" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="4360:4414" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="4447:4522" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="4535:5302" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="4558:4605" ph="/* if(Input.GetKeyDown(&quot;space&quot;)) ... */" />
+            <marker date="1550477715093" expanded="true" signature="4945:5101" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="5151:5232" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="5324:5834" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="5458:5577" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="5675:5769" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="5974:7084" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="5989:6123" ph="/* Ray ray = new Ray(_avatarTransform.position ,_avatarLookForward); ... */" />
+            <marker date="1550477715093" expanded="true" signature="6134:6203" ph="/* RaycastHit hit; ... */" />
+            <marker date="1550477715093" expanded="true" signature="6921:7016" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="7151:7428" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="7313:7422" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="7466:7529" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="7560:7581" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="7602:16467" ph="Internal Logic" />
+            <marker date="1550477715093" expanded="true" signature="7896:11329" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="8052:8520" ph="/* if (_Helper_IsThereOOI()) ... */" />
+            <marker date="1550477715093" expanded="true" signature="8558:10370" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="8588:9103" ph="/* Collider[] objs; ... */" />
+            <marker date="1550477715093" expanded="true" signature="9768:10002" ph="/* Quaternion movecam = Quaternion.Euler(pitch, yaw, 0); ... */" />
+            <marker date="1550477715093" expanded="true" signature="10127:10320" ph="/* _cameraTransform.Rotate(Vector3.right *pitch * Time.deltaTime, Space.Self); ... */" />
+            <marker date="1550477715093" expanded="true" signature="10387:10666" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="11363:11882" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="11916:11991" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="12038:13148" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="13672:16217" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="13803:14291" ph="/* if (Input.GetAxis(&quot;Mouse X&quot;) != 0) ... */" />
+            <marker date="1550477715093" expanded="true" signature="14324:16210" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="15449:15875" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="15611:15829" ph="/* if (distance &gt; 2) ... */" />
+            <marker date="1550477715093" expanded="true" signature="15892:15960" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="15973:16200" ph="/* lerp for smooth the fade in ... */" />
+            <marker date="1550477715093" expanded="true" signature="16287:16451" ph="{...}" />
+            <marker date="1550477715093" expanded="false" signature="16473:17529" ph="Helper Functions" />
+            <marker date="1550477715093" expanded="true" signature="16598:16854" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="16892:17338" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="17154:17303" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="17229:17293" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="17388:17509" ph="{...}" />
+            <marker date="1550477715093" expanded="true" signature="17403:17477" ph="/* Sphere Overlap ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

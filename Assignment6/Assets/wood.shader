@@ -1,21 +1,21 @@
 // Made with Amplify Shader Editor
 // Available at the Unity Asset Store - http://u3d.as/y3X 
-Shader "grass2shader"
+Shader "wood"
 {
 	Properties
 	{
-		_Cutoff( "Mask Clip Value", Float ) = 0.5
-		_SpecularColor("Specular Color", Color) = (0.3921569,0.3921569,0.3921569,1)
+		_AM_154_055_Shinus_Molle_Bark_diff("AM_154_055_Shinus_Molle_Bark_diff", 2D) = "white" {}
+		_Height("Height", 2D) = "bump" {}
+		_SpecularColor("Specular Color", Color) = (0.2924528,0.2303756,0.2303756,1)
 		_Shininess("Shininess", Range( 0.01 , 1)) = 0.1
-		_tex3("tex3", 2D) = "white" {}
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
 
 	SubShader
 	{
-		Tags{ "RenderType" = "TransparentCutout"  "Queue" = "Transparent+0" }
-		Cull Off
+		Tags{ "RenderType" = "Opaque"  "Queue" = "Geometry+0" }
+		Cull Back
 		CGINCLUDE
 		#include "UnityPBSLighting.cginc"
 		#include "UnityCG.cginc"
@@ -32,10 +32,10 @@ Shader "grass2shader"
 		#endif
 		struct Input
 		{
-			float2 uv_texcoord;
 			float3 worldPos;
 			float3 worldNormal;
 			INTERNAL_DATA
+			float2 uv_texcoord;
 		};
 
 		struct SurfaceOutputCustomLightingCustom
@@ -51,11 +51,12 @@ Shader "grass2shader"
 			UnityGIInput GIData;
 		};
 
-		uniform sampler2D _tex3;
-		uniform float4 _tex3_ST;
 		uniform float4 _SpecularColor;
+		uniform sampler2D _Height;
+		uniform float4 _Height_ST;
 		uniform float _Shininess;
-		uniform float _Cutoff = 0.5;
+		uniform sampler2D _AM_154_055_Shinus_Molle_Bark_diff;
+		uniform float4 _AM_154_055_Shinus_Molle_Bark_diff_ST;
 
 		inline half4 LightingStandardCustomLighting( inout SurfaceOutputCustomLightingCustom s, half3 viewDir, UnityGI gi )
 		{
@@ -76,9 +77,7 @@ Shader "grass2shader"
 			float fadeDist = UnityComputeShadowFadeDistance(data.worldPos, zDist);
 			ase_lightAtten = UnityMixRealtimeAndBakedShadows(data.atten, bakedAtten, UnityComputeShadowFade(fadeDist));
 			#endif
-			float2 uv_tex3 = i.uv_texcoord * _tex3_ST.xy + _tex3_ST.zw;
-			float4 tex2DNode1 = tex2D( _tex3, uv_tex3 );
-			float4 temp_output_17_0_g1 = _SpecularColor;
+			float4 temp_output_17_0_g9 = _SpecularColor;
 			float3 ase_worldPos = i.worldPos;
 			float3 ase_worldViewDir = normalize( UnityWorldSpaceViewDir( ase_worldPos ) );
 			#if defined(LIGHTMAP_ON) && UNITY_VERSION < 560 //aseld
@@ -86,24 +85,35 @@ Shader "grass2shader"
 			#else //aseld
 			float3 ase_worldlightDir = normalize( UnityWorldSpaceLightDir( ase_worldPos ) );
 			#endif //aseld
-			float3 normalizeResult37_g1 = normalize( ( ase_worldViewDir + ase_worldlightDir ) );
-			float3 normalizeResult10_g1 = normalize( (WorldNormalVector( i , float3(0,0,1) )) );
-			float dotResult25_g1 = dot( normalizeResult37_g1 , normalizeResult10_g1 );
+			float3 normalizeResult37_g9 = normalize( ( ase_worldViewDir + ase_worldlightDir ) );
+			float2 uv_Height = i.uv_texcoord * _Height_ST.xy + _Height_ST.zw;
+			float2 temp_output_2_0_g8 = uv_Height;
+			float2 break6_g8 = temp_output_2_0_g8;
+			float temp_output_25_0_g8 = ( pow( 0.5 , 3.0 ) * 0.1 );
+			float2 appendResult8_g8 = (float2(( break6_g8.x + temp_output_25_0_g8 ) , break6_g8.y));
+			float4 tex2DNode14_g8 = tex2D( _Height, temp_output_2_0_g8 );
+			float temp_output_4_0_g8 = 2.0;
+			float3 appendResult13_g8 = (float3(1.0 , 0.0 , ( ( tex2D( _Height, appendResult8_g8 ).g - tex2DNode14_g8.g ) * temp_output_4_0_g8 )));
+			float2 appendResult9_g8 = (float2(break6_g8.x , ( break6_g8.y + temp_output_25_0_g8 )));
+			float3 appendResult16_g8 = (float3(0.0 , 1.0 , ( ( tex2D( _Height, appendResult9_g8 ).g - tex2DNode14_g8.g ) * temp_output_4_0_g8 )));
+			float3 normalizeResult22_g8 = normalize( cross( appendResult13_g8 , appendResult16_g8 ) );
+			float3 normalizeResult10_g9 = normalize( (WorldNormalVector( i , normalizeResult22_g8 )) );
+			float dotResult25_g9 = dot( normalizeResult37_g9 , normalizeResult10_g9 );
 			#if defined(LIGHTMAP_ON) && UNITY_VERSION < 560 //aselc
 			float4 ase_lightColor = 0;
 			#else //aselc
 			float4 ase_lightColor = _LightColor0;
 			#endif //aselc
-			float3 temp_output_4_0_g1 = ( ase_lightColor.rgb * ase_lightAtten );
-			float dotResult5_g1 = dot( normalizeResult10_g1 , ase_worldlightDir );
-			UnityGI gi50_g1 = gi;
-			float3 diffNorm50_g1 = normalizeResult10_g1;
-			gi50_g1 = UnityGI_Base( data, 1, diffNorm50_g1 );
-			float3 indirectDiffuse50_g1 = gi50_g1.indirect.diffuse + diffNorm50_g1 * 0.0001;
-			float4 temp_output_24_0_g1 = tex2DNode1;
-			c.rgb = ( ( (temp_output_17_0_g1).rgb * (temp_output_17_0_g1).a * pow( max( dotResult25_g1 , 0.0 ) , ( _Shininess * 128.0 ) ) * temp_output_4_0_g1 ) + ( ( ( temp_output_4_0_g1 * max( dotResult5_g1 , 0.0 ) ) + indirectDiffuse50_g1 ) * (temp_output_24_0_g1).rgb ) );
+			float3 temp_output_4_0_g9 = ( ase_lightColor.rgb * ase_lightAtten );
+			float dotResult5_g9 = dot( normalizeResult10_g9 , ase_worldlightDir );
+			UnityGI gi50_g9 = gi;
+			float3 diffNorm50_g9 = normalizeResult10_g9;
+			gi50_g9 = UnityGI_Base( data, 1, diffNorm50_g9 );
+			float3 indirectDiffuse50_g9 = gi50_g9.indirect.diffuse + diffNorm50_g9 * 0.0001;
+			float2 uv_AM_154_055_Shinus_Molle_Bark_diff = i.uv_texcoord * _AM_154_055_Shinus_Molle_Bark_diff_ST.xy + _AM_154_055_Shinus_Molle_Bark_diff_ST.zw;
+			float4 temp_output_24_0_g9 = tex2D( _AM_154_055_Shinus_Molle_Bark_diff, uv_AM_154_055_Shinus_Molle_Bark_diff );
+			c.rgb = ( ( (temp_output_17_0_g9).rgb * (temp_output_17_0_g9).a * pow( max( dotResult25_g9 , 0.0 ) , ( _Shininess * 128.0 ) ) * temp_output_4_0_g9 ) + ( ( ( temp_output_4_0_g9 * max( dotResult5_g9 , 0.0 ) ) + indirectDiffuse50_g9 ) * (temp_output_24_0_g9).rgb ) );
 			c.a = 1;
-			clip( tex2DNode1.a - _Cutoff );
 			return c;
 		}
 
@@ -191,9 +201,6 @@ Shader "grass2shader"
 				SurfaceOutputCustomLightingCustom o;
 				UNITY_INITIALIZE_OUTPUT( SurfaceOutputCustomLightingCustom, o )
 				surf( surfIN, o );
-				UnityGI gi;
-				UNITY_INITIALIZE_OUTPUT( UnityGI, gi );
-				o.Alpha = LightingStandardCustomLighting( o, worldViewDir, gi ).a;
 				#if defined( CAN_SKIP_VPOS )
 				float2 vpos = IN.pos;
 				#endif
@@ -207,12 +214,13 @@ Shader "grass2shader"
 }
 /*ASEBEGIN
 Version=16300
-138;370;1819;1010;1590.163;739.4563;1.48261;True;True
-Node;AmplifyShaderEditor.SamplerNode;1;-364.5,-95.5;Float;True;Property;_tex3;tex3;5;0;Create;True;0;0;False;0;a637eb3e613f982488445d9460fc92f5;a637eb3e613f982488445d9460fc92f5;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.FunctionNode;2;-67.66528,-153.6044;Float;False;Annotated_BlinnPhong_Std;1;;1;2120f7d923fc58a409faa9b3453c966b;0;3;44;FLOAT3;0,0,0;False;24;COLOR;0,0,0,0;False;17;COLOR;0,0,0,0;False;2;FLOAT3;32;FLOAT;31
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;313,-120;Float;False;True;2;Float;ASEMaterialInspector;0;0;CustomLighting;grass2shader;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Off;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Custom;0.5;True;True;0;True;TransparentCutout;;Transparent;All;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;0;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;15;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
-WireConnection;2;24;1;0
-WireConnection;0;10;1;4
-WireConnection;0;13;2;32
+525;456;1819;686;973.4124;374.8454;1;True;True
+Node;AmplifyShaderEditor.SamplerNode;1;-570.5,-84.5;Float;True;Property;_AM_154_055_Shinus_Molle_Bark_diff;AM_154_055_Shinus_Molle_Bark_diff;0;0;Create;True;0;0;False;0;b4f163be8f30873459eac3059ff60543;b4f163be8f30873459eac3059ff60543;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.FunctionNode;9;-560.5,-328.5;Float;True;NormalCreate;1;;8;e12f7ae19d416b942820e3932b56220f;0;4;1;SAMPLER2D;;False;2;FLOAT2;0,0;False;3;FLOAT;0.5;False;4;FLOAT;2;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.FunctionNode;10;-198.5,-135.5;Float;False;Annotated_BlinnPhong_Std;3;;9;2120f7d923fc58a409faa9b3453c966b;0;3;44;FLOAT3;0,0,0;False;24;COLOR;0,0,0,0;False;17;COLOR;0,0,0,0;False;2;FLOAT3;32;FLOAT;31
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;250,-242;Float;False;True;2;Float;ASEMaterialInspector;0;0;CustomLighting;wood;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;15;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+WireConnection;10;44;9;0
+WireConnection;10;24;1;0
+WireConnection;0;13;10;32
 ASEEND*/
-//CHKSM=5727EC3CC8BF1130F44D8D68F11FED6BE7BEE595
+//CHKSM=22C692AAB7A6E85308994BC3BEA464C4E5643CE2

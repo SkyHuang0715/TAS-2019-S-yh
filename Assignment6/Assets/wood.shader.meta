@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 6b04085c59226794083ff30b272dbcad
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Height: {fileID: 2800000, guid: 7ddcba51d9fc0894d98b4ba77fbdfbd7, type: 3}
+  - _AM_154_055_Shinus_Molle_Bark_diff: {fileID: 2800000, guid: b4f163be8f30873459eac3059ff60543,
+      type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

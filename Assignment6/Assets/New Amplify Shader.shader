@@ -5,7 +5,7 @@ Shader "New Amplify Shader"
 	Properties
 	{
 		_Cutoff( "Mask Clip Value", Float ) = 0.4
-		_SpecularColor("Specular Color", Color) = (0.3921569,0.3921569,0.3921569,1)
+		_SpecularColor("Specular Color", Color) = (0.2924528,0.2303756,0.2303756,1)
 		_Shininess("Shininess", Range( 0.01 , 1)) = 0.1
 		_tex1("tex1", 2D) = "white" {}
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
@@ -101,7 +101,7 @@ Shader "New Amplify Shader"
 			gi50_g1 = UnityGI_Base( data, 1, diffNorm50_g1 );
 			float3 indirectDiffuse50_g1 = gi50_g1.indirect.diffuse + diffNorm50_g1 * 0.0001;
 			float4 temp_output_24_0_g1 = tex2DNode1;
-			c.rgb = ( ( (temp_output_17_0_g1).rgb * (temp_output_17_0_g1).a * pow( max( dotResult25_g1 , 0.0 ) , ( _Shininess * 128.0 ) ) * temp_output_4_0_g1 ) + ( ( ( temp_output_4_0_g1 * max( dotResult5_g1 , 0.0 ) ) + indirectDiffuse50_g1 ) * (temp_output_24_0_g1).rgb ) );
+			c.rgb = ( ( ( (temp_output_17_0_g1).rgb * 1.703127 ) * (temp_output_17_0_g1).a * pow( max( dotResult25_g1 , 0.0 ) , ( _Shininess * 128.0 ) ) * temp_output_4_0_g1 ) + ( ( ( temp_output_4_0_g1 * max( dotResult5_g1 , 0.0 ) ) + indirectDiffuse50_g1 ) * (temp_output_24_0_g1).rgb ) );
 			c.a = 1;
 			clip( tex2DNode1.a - _Cutoff );
 			return c;
@@ -207,7 +207,7 @@ Shader "New Amplify Shader"
 }
 /*ASEBEGIN
 Version=16300
-138;370;1819;1010;974.3986;407.9502;1;True;True
+-4;555;1819;712;1282.673;301.11;1.3;True;True
 Node;AmplifyShaderEditor.SamplerNode;1;-384.5,-145;Float;True;Property;_tex1;tex1;5;0;Create;True;0;0;False;0;60b0c11de686f314daaf63d3eb7a6cf6;60b0c11de686f314daaf63d3eb7a6cf6;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.FunctionNode;2;-74.12242,-273.4312;Float;False;Annotated_BlinnPhong_Std;1;;1;2120f7d923fc58a409faa9b3453c966b;0;3;44;FLOAT3;0,0,0;False;24;COLOR;0,0,0,0;False;17;COLOR;0,0,0,0;False;2;FLOAT3;32;FLOAT;31
 Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;257,-208;Float;False;True;2;Float;ASEMaterialInspector;0;0;CustomLighting;New Amplify Shader;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Off;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Custom;0.4;True;True;0;True;TransparentCutout;;Transparent;All;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;0;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;15;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
@@ -215,4 +215,4 @@ WireConnection;2;24;1;0
 WireConnection;0;10;1;4
 WireConnection;0;13;2;32
 ASEEND*/
-//CHKSM=889D7F954C99F00AC90CDFF952417BCBBAC0D3ED
+//CHKSM=FDF06E5E4DF5101F33C8ECA2D6BC1588D9978810

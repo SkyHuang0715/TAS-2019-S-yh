@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 48e300052e494044e855a36d4e3d1d94
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _char_woodman_normals: {fileID: 2800000, guid: 9a4a55d8d2e54394d97426434477cdcf,
+      type: 3}
+  - _TextureSample1: {fileID: 8900000, guid: 73ed6c6049520484b9b253605475002d, type: 3}
+  - _Cubemap: {fileID: 8900000, guid: 73ed6c6049520484b9b253605475002d, type: 3}
+  - _TextureSample3: {fileID: 8900000, guid: 73ed6c6049520484b9b253605475002d, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
